@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Games</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="left-nav">
+            <h1>My Favorite Games</h1>
+        </div>
+        <div class="center-nav">
+            <input type="text" id="searchBar" placeholder="Search games...">
+        </div>
+        <div class="right-nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <header>
+        <h2>Welcome to My Game List</h2>
+        <p>Add and manage your favorite games</p>
+        <button id="addGameBtn">Add a New Game</button>
+    </header>
+
+    <main>
+        <div id="gameList" class="game-grid"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Favorite Games</p>
+    </footer>
+
+    <!-- Add/Edit Game Form Modal -->
+    <div id="gameForm" class="modal">
+        <div class="modal-content">
+            <span class="closeBtn" onclick="closeModal()">&times;</span>
+            <h2 id="formTitle">Add a New Game</h2>
+            <form id="newGameForm">
+                <input type="text" id="title" placeholder="Game Title" required>
+                <input type="date" id="releaseDate" placeholder="Release Date" required>
+                <input type="file" id="image" accept="image/*" required>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- View Game Modal -->
+    <div id="viewGameModal" class="modal">
+        <div class="modal-content">
+            <span class="closeBtn" onclick="closeModal()">&times;</span>
+            <h2 id="gameTitle"></h2>
+            <img id="gameImage" src="" alt="">
+            <p id="gameReleaseDate"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
